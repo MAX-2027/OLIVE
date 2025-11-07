@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>橄榄树种植 | 为绿色未来捐款</title>
+    <style>
+        /* --- ESTILOS GLOBALES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background-color: #faf9f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+
+        /* --- CABECERA --- */
+        header {
+            background-color: #3d5a40;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
+
+        /* --- SECCIÓN PRINCIPAL --- */
+        .hero {
+            background: url('olivo1.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-content h2 {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .hero-content .btn {
+            background-color: #a4c639;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .hero-content .btn:hover {
+            background-color: #8db32e;
+        }
+
+        /* --- SECCIÓN DE IMÁGENES --- */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: #f1f5e8;
+        }
+
+        .gallery img {
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- SECCIÓN DE DONACIÓN --- */
+        .donate {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+
+        .donate h2 {
+            color: #3d5a40;
+            margin-bottom: 20px;
+        }
+
+        .donate p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+            font-size: 1.1rem;
+        }
+
+        .donate small {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .bitcoin-address {
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: inline-block;
+            padding: 15px;
+            font-family: monospace;
+            margin-bottom: 20px;
+        }
+
+        .donate button {
+            background-color: #f2a900;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .donate button:hover {
+            background-color: #ffb700;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            background-color: #3d5a40;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #a4c639;
+            font-weight: bold;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+            .gallery img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>橄榄树种植</h1>
+        <p>帮助我们创造一个更加绿色和可持续的未来</p>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>您的捐赠播种生命</h2>
+            <p>每一份捐赠都有助于种植一棵新的橄榄树，它是和平与希望的象征。</p>
+            <a href="#donar" class="btn">立即捐赠</a>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <img src="olivo1.jpg" alt="年轻的橄榄树">
+        <img src="olivo2.jpg" alt="橄榄树种植">
+        <img src="olivo3.jpg" alt="成熟的橄榄树">
+    </section>
+
+    <section class="donate" id="donar">
+        <h2>捐赠支持</h2>
+        <p>通过您的支持，我们将继续种植橄榄树并保护地球。</p>
+
+        <div class="bitcoin-address">
+            bc1q7fqrx6xknkdzqfckkhwvpphayfjg69lp679chl
+        </div><br>
+
+        <button onclick="window.location.href='bitcoin:bc1q7fqrx6xknkdzqfckkhwvpphayfjg69lp679chl'">
+            使用比特币捐赠
+        </button>
+
+        <!-- Contador de visitas -->
+        <div id="visit-counter">
+            <h3>访问量：</h3>
+            <p><strong id="visitas">0</strong></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 橄榄树种植 | 爱地球的人们共同创造</p>
+    </footer>
+
+    <script>
+        // Contador de visitas simple usando localStorage
+        let visitas = localStorage.getItem('contador-visitas') || 0;
+        visitas = parseInt(visitas) + 1;
+        localStorage.setItem('contador-visitas', visitas);
+        document.getElementById('visitas').textContent = visitas;
+    </script>
+</body>
+</html>
